@@ -1,0 +1,20 @@
+{
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.tree.enableStickyScroll": false,
+    "editor.stickyScroll.enabled": false,
+
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnType": true
+    },
+
+    "ruff.lint.enable": true,
+    "ruff.organizeImports": true,
+    "ruff.fixAll": true,
+    "ruff.configurationPreference": "filesystemFirst"
+    // "ruff.configuration": "${env:HOME}/.config/pyproject.toml"
+}
