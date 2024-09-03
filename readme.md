@@ -11,6 +11,13 @@ microsoft公式リポジトリ
 ruff
 - [tutorial][ruff_tutorial]
 - [rules][ruff_rules]
+
+Bookmark
+[![](https://raw.githubusercontent.com/alefragnani/vscode-bookmarks/master/images/vscode-bookmarks-logo-readme.png)][code_mookmarks]
+- [解説][bookmarks_intro]
+
+1. `ctrl` + `alt` + `k` でbookmarkのオンオフ
+2. `ctrl` + `alt` + `j` / `l` でbookmarkの前後へジャンプ
 <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
 
 ## 参考サイト
@@ -76,6 +83,8 @@ tree
 [vscode_dev_containers]: https://github.com/microsoft/vscode-dev-containers
 [ruff_tutorial]: https://docs.astral.sh/ruff/tutorial/
 [ruff_rules]: https://docs.astral.sh/ruff/rules/
+[code_mookmarks]: https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks
+[bookmarks_intro]: https://web-souko.com/vscode-bookmarks/
 [rye_ruff]: https://zenn.dev/dena/articles/rye_python_in_devcontainer
 [introduction_ruff]: https://gihyo.jp/article/2023/03/monthly-python-2303
 [how_to_use_venv]: https://qiita.com/shun_sakamoto/items/7944d0ac4d30edf91fde
