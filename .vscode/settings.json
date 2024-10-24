@@ -11,7 +11,7 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnType": true
     },
-
+    "ruff.enable": true,
     "ruff.lint.enable": true,
     "ruff.organizeImports": true,
     "ruff.fixAll": true,
