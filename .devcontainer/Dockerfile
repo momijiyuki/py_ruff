@@ -13,10 +13,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
     TERM=xterm \
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 "(%s)")\$ '
 
-COPY user_registration.sh /tmp/install_lib/
-COPY bin/ /tmp/install_lib/bin/
-COPY requirements.txt /home/$USERNAME/
-
 RUN apt-get update && \
     apt-get purge -y imagemagick imagemagick-6-common && \
     apt-get install -y --no-install-recommends \
@@ -48,10 +44,12 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
+COPY user_registration.sh /tmp/install_lib/
+COPY bin/ /tmp/install_lib/bin/
+COPY requirements.txt /home/$USERNAME/
 
-RUN bash /tmp/install_lib/user_registration.sh
-#  && \
-#     bash /tmp/install_lib/install.sh
+RUN bash /tmp/install_lib/user_registration.sh && \
+    rm -r /tmp/install_lib/
 
 WORKDIR /home/$USERNAME
 

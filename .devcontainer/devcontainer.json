@@ -1,19 +1,16 @@
 {
     "name": "py_ruff",
-    "build": { "dockerfile": "Dockerfile" },
-    "runArgs": ["--init", "--name", "py_ruff"],
-    "containerEnv": {
-        "USERNAME": "${containerEnv:USERNAME}"
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USERNAME": "pyuser"
+        }
     },
-    "mounts": [
-        "source=${localEnv:HOME}/.ssh/,target=/home/${containerEnv:USERNAME}/.ssh/,type=bind,consistency=cached",
-        "source=${localEnv:HOME}/.gitconfig,target=/home/${containerEnv:USERNAME}/.gitconfig,type=bind,consistency=cached"
-    ],
+    "runArgs": ["--init", "--name", "py_ruff"],
     "customizations": {
         "vscode": {
             "settings": {
                 "diffEditor.ignoreTrimWhitespace": false,
-                "explorer.openEditors.visible": 0,
                 "files.insertFinalNewline": true,
                 "files.trimTrailingWhitespace": true,
                 "markdown-preview-enhanced.scrollSync": false
@@ -30,7 +27,6 @@
                 "kevinrose.vsc-python-indent",
                 "njpwerner.autodocstring",
                 "shd101wyy.markdown-preview-enhanced",
-                "yzane.markdown-pdf",
                 "yzhang.markdown-all-in-one"
             ]
         }
